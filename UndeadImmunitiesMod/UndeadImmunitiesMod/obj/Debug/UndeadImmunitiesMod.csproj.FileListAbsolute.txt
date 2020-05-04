@@ -1,0 +1,3 @@
+C:\Users\Chris\Documents\kingmaker stuff\mods\MyCreatedMods\KingmakerUndeadImmunitiesMod\UndeadImmunitiesMod\UndeadImmunitiesMod\obj\Debug\UndeadImmunitiesMod.csprojAssemblyReference.cache
+C:\Users\Chris\Documents\kingmaker stuff\mods\MyCreatedMods\KingmakerUndeadImmunitiesMod\UndeadImmunitiesMod\UndeadImmunitiesMod\obj\Debug\UndeadImmunitiesMod.Properties.Resources.resources
+C:\Users\Chris\Documents\kingmaker stuff\mods\MyCreatedMods\KingmakerUndeadImmunitiesMod\UndeadImmunitiesMod\UndeadImmunitiesMod\obj\Debug\UndeadImmunitiesMod.csproj.GenerateResource.cache

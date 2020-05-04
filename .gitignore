@@ -1,0 +1,16 @@
+ # ignore all bin directories
+    # matches "bin" in any subfolder
+    bin/
+
+    # ignore all target directories
+    target/
+
+    # ignore all files ending with ~
+    *~
+
+    # ignore all files with suo
+    *.suo
+UndeadImmunitiesMod/.vs/UndeadImmunitiesMod/v16/Server/sqlite3/db.lock
+UndeadImmunitiesMod/.vs*
+*.lock
+

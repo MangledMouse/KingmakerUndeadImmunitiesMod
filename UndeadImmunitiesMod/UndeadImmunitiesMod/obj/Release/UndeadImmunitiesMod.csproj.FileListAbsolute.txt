@@ -1,0 +1,10 @@
+C:\Users\Chris\Documents\kingmaker stuff\mods\MyCreatedMods\KingmakerUndeadImmunitiesMod\UndeadImmunitiesMod\UndeadImmunitiesMod\bin\Release\UndeadImmunitiesMod\blueprints.txt
+C:\Users\Chris\Documents\kingmaker stuff\mods\MyCreatedMods\KingmakerUndeadImmunitiesMod\UndeadImmunitiesMod\UndeadImmunitiesMod\bin\Release\UndeadImmunitiesMod\info.json
+C:\Users\Chris\Documents\kingmaker stuff\mods\MyCreatedMods\KingmakerUndeadImmunitiesMod\UndeadImmunitiesMod\UndeadImmunitiesMod\bin\Release\UndeadImmunitiesMod\settings.json
+C:\Users\Chris\Documents\kingmaker stuff\mods\MyCreatedMods\KingmakerUndeadImmunitiesMod\UndeadImmunitiesMod\UndeadImmunitiesMod\bin\Release\UndeadImmunitiesMod\UndeadImmunitiesMod.dll
+C:\Users\Chris\Documents\kingmaker stuff\mods\MyCreatedMods\KingmakerUndeadImmunitiesMod\UndeadImmunitiesMod\UndeadImmunitiesMod\bin\Release\UndeadImmunitiesMod\UndeadImmunitiesMod.pdb
+C:\Users\Chris\Documents\kingmaker stuff\mods\MyCreatedMods\KingmakerUndeadImmunitiesMod\UndeadImmunitiesMod\UndeadImmunitiesMod\obj\Release\UndeadImmunitiesMod.csprojAssemblyReference.cache
+C:\Users\Chris\Documents\kingmaker stuff\mods\MyCreatedMods\KingmakerUndeadImmunitiesMod\UndeadImmunitiesMod\UndeadImmunitiesMod\obj\Release\UndeadImmunitiesMod.Properties.Resources.resources
+C:\Users\Chris\Documents\kingmaker stuff\mods\MyCreatedMods\KingmakerUndeadImmunitiesMod\UndeadImmunitiesMod\UndeadImmunitiesMod\obj\Release\UndeadImmunitiesMod.csproj.GenerateResource.cache
+C:\Users\Chris\Documents\kingmaker stuff\mods\MyCreatedMods\KingmakerUndeadImmunitiesMod\UndeadImmunitiesMod\UndeadImmunitiesMod\obj\Release\UndeadImmunitiesMod.dll
+C:\Users\Chris\Documents\kingmaker stuff\mods\MyCreatedMods\KingmakerUndeadImmunitiesMod\UndeadImmunitiesMod\UndeadImmunitiesMod\obj\Release\UndeadImmunitiesMod.pdb
