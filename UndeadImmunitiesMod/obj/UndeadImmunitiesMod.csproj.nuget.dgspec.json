@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Chris\\Documents\\kingmaker stuff\\mods\\MyCreatedMods\\UndeadImmunitiesMod\\UndeadImmunitiesMod\\UndeadImmunitiesMod.csproj": {}
+    "C:\\Users\\Chris\\Documents\\kingmaker stuff\\mods\\MyCreatedMods\\KingmakerUndeadImmunitiesMod\\UndeadImmunitiesMod\\UndeadImmunitiesMod.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Chris\\Documents\\kingmaker stuff\\mods\\MyCreatedMods\\UndeadImmunitiesMod\\UndeadImmunitiesMod\\UndeadImmunitiesMod.csproj": {
+    "C:\\Users\\Chris\\Documents\\kingmaker stuff\\mods\\MyCreatedMods\\KingmakerUndeadImmunitiesMod\\UndeadImmunitiesMod\\UndeadImmunitiesMod.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Chris\\Documents\\kingmaker stuff\\mods\\MyCreatedMods\\UndeadImmunitiesMod\\UndeadImmunitiesMod\\UndeadImmunitiesMod.csproj",
+        "projectUniqueName": "C:\\Users\\Chris\\Documents\\kingmaker stuff\\mods\\MyCreatedMods\\KingmakerUndeadImmunitiesMod\\UndeadImmunitiesMod\\UndeadImmunitiesMod.csproj",
         "projectName": "UndeadImmunitiesMod",
-        "projectPath": "C:\\Users\\Chris\\Documents\\kingmaker stuff\\mods\\MyCreatedMods\\UndeadImmunitiesMod\\UndeadImmunitiesMod\\UndeadImmunitiesMod.csproj",
+        "projectPath": "C:\\Users\\Chris\\Documents\\kingmaker stuff\\mods\\MyCreatedMods\\KingmakerUndeadImmunitiesMod\\UndeadImmunitiesMod\\UndeadImmunitiesMod.csproj",
         "packagesPath": "C:\\Users\\Chris\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Chris\\Documents\\kingmaker stuff\\mods\\MyCreatedMods\\UndeadImmunitiesMod\\UndeadImmunitiesMod\\obj\\",
+        "outputPath": "C:\\Users\\Chris\\Documents\\kingmaker stuff\\mods\\MyCreatedMods\\KingmakerUndeadImmunitiesMod\\UndeadImmunitiesMod\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -21,14 +21,14 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.0"
+          "netstandard4.7"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.0": {
+          "netstandard4.7": {
             "projectReferences": {}
           }
         },
@@ -39,15 +39,7 @@
         }
       },
       "frameworks": {
-        "netstandard2.0": {
-          "dependencies": {
-            "NETStandard.Library": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
-            }
-          },
+        "netstandard4.7": {
           "imports": [
             "net461",
             "net462",
