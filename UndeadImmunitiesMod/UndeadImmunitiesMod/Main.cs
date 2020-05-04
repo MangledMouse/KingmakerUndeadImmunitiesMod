@@ -77,8 +77,6 @@ namespace UndeadImmunitiesMod
             static void Postfix(LibraryScriptableObject __instance)
             {
                 var self = __instance;
-                logger.Log("Did make it to undead ImmunitiesMod");
-                logger.Log("Library loaded? " + (Main.library != null).ToString());
                 if (Main.library != null) return;
                 Main.library = self;
                 try
