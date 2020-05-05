@@ -40,7 +40,7 @@ namespace UndeadImmunitiesMod
 
             //Stun and sleep are added here because, by PnP rules, Undead are immune to these traits in addition to being immune to mind-affecting things
             //SpellDescriptor sd1 = (SpellDescriptor)((long)SpellDescriptor.Poison + (long)SpellDescriptor.Disease + (long)SpellDescriptor.Fatigue + (long)SpellDescriptor.Exhausted + (long)SpellDescriptor.Death + (long)SpellDescriptor.Bleed + (long)SpellDescriptor.VilderavnBleed) + (long)SpellDescriptor.Stun + (long)SpellDescriptor.Sleep;
-            SpellDescriptor sd1 = (SpellDescriptor)((long)SpellDescriptor.Poison + (long)SpellDescriptor.Disease + (long)SpellDescriptor.Fatigue + (long)SpellDescriptor.Exhausted + (long)SpellDescriptor.Death + (long)SpellDescriptor.Bleed + (long)SpellDescriptor.VilderavnBleed) + (long)SpellDescriptor.Stun + (long)SpellDescriptor.Sleep + (long)SpellDescriptor.Polymorph;
+            SpellDescriptor sd1 = (SpellDescriptor)((long)SpellDescriptor.Poison + (long)SpellDescriptor.Disease + (long)SpellDescriptor.Sickened +(long)SpellDescriptor.Fatigue + (long)SpellDescriptor.Exhausted + (long)SpellDescriptor.Death + (long)SpellDescriptor.Bleed + (long)SpellDescriptor.VilderavnBleed + (long)SpellDescriptor.Stun + (long)SpellDescriptor.Sleep);
             //The list to bypass now includes only mindaffecting elements. As the PnP rules do not specificy that Daze
             //is mind-affecting that has been removed from their immunities entirely
             //its possible that this should be the mindaffecting trait alone or all of the mind affecting things
@@ -76,17 +76,17 @@ namespace UndeadImmunitiesMod
                 Main.logger.Log("Spell descriptor immunity list: " + sitsd.Descriptor.Value.ToString());
             }
 
-            var undeadImmunitiesComponents = undeadImmunities.GetComponents<BlueprintComponent>();
-            foreach (BlueprintComponent bc in undeadImmunitiesComponents)
-            {
-                Main.logger.Log("Undead immunities component name:" + bc.name + " and type:" + bc.GetType().ToString());
-            }
+            //var undeadImmunitiesComponents = undeadImmunities.GetComponents<BlueprintComponent>();
+            //foreach (BlueprintComponent bc in undeadImmunitiesComponents)
+            //{
+            //    Main.logger.Log("Undead immunities component name:" + bc.name + " and type:" + bc.GetType().ToString());
+            //}
 
-            var deathWardBuff = library.Get<BlueprintBuff>("b0253e57a75b621428c1b89de5a937d1");
-            foreach(BlueprintComponent bc in deathWardBuff.GetComponents<BlueprintComponent>())
-            {
-                Main.logger.Log("Deathward buff component name: " + bc.name + " and type: " +bc.GetType().ToString());
-            }
+            //var deathWardBuff = library.Get<BlueprintBuff>("b0253e57a75b621428c1b89de5a937d1");
+            //foreach(BlueprintComponent bc in deathWardBuff.GetComponents<BlueprintComponent>())
+            //{
+            //    Main.logger.Log("Deathward buff component name: " + bc.name + " and type: " +bc.GetType().ToString());
+            //}
 
             //var undeadType = library.Get<BlueprintFeature>("734a29b693e9ec346ba2951b27987e33");
             //undeadType.GetComponent<SpellImmunityToSpellDescriptor>().Descriptor = SpellDescriptor.None;
