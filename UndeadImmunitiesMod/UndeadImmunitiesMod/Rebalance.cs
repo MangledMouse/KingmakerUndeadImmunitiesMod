@@ -14,6 +14,8 @@ using Kingmaker.Blueprints.Classes.Spells;
 using Kingmaker.UnitLogic.Buffs.Blueprints;
 using UnityEngine;
 using Harmony12;
+using Kingmaker.UnitLogic.Abilities.Blueprints;
+using Kingmaker.Designers.Mechanics.Buffs;
 
 namespace UndeadImmunitiesMod
 {
@@ -28,9 +30,10 @@ namespace UndeadImmunitiesMod
         static LibraryScriptableObject library => Main.library;
         static public void undeadImmunitiesChange()
         {
-            
+
+           
+
             BlueprintFeature undeadImmunities = library.Get<BlueprintFeature>("8a75eb16bfff86949a4ddcb3dd2f83ae");
-            
 
             //Undead have 3 condition immunities, 1 for nauseated, 1 for fatigued and 1 for sickened
 
@@ -56,7 +59,7 @@ namespace UndeadImmunitiesMod
                 {
                     bdi.Descriptor = sd2;
                 }
-                Main.logger.Log("Buff descriptor immunity list: " + bdi.Descriptor.Value.ToString());
+                //Main.logger.Log("Buff descriptor immunity list: " + bdi.Descriptor.Value.ToString());
             }
 
             //undead also have a derivative stat bonus immunity which they should retain
@@ -73,8 +76,27 @@ namespace UndeadImmunitiesMod
                 {
                     sitsd.Descriptor = sd2;
                 }
-                Main.logger.Log("Spell descriptor immunity list: " + sitsd.Descriptor.Value.ToString());
+                //Main.logger.Log("Spell descriptor immunity list: " + sitsd.Descriptor.Value.ToString());
             }
+
+            //because undead should be immune to all fortitude negates effects, they should have immunity to the baleful polymorph buff
+            BlueprintBuff balefulPolymorphBuff = library.Get<BlueprintBuff>("0a52d8761bfd125429842103aed48b90");
+            SpecificBuffImmunity sbi = new SpecificBuffImmunity
+            {
+                Buff = balefulPolymorphBuff
+            };
+            undeadImmunities.ComponentsArray = undeadImmunities.ComponentsArray.AddToArray(sbi);
+
+            //BlueprintBuff dazed = library.Get<BlueprintBuff>("9934fedff1b14994ea90205d189c8759");//the buff from the daze spell
+            //SpellDescriptorComponent sdc = dazed.GetComponent<SpellDescriptorComponent>();
+            //sdc.Descriptor = SpellDescriptor.Daze;
+
+            //foreach(BlueprintComponent bc in dazed.GetComponents<BlueprintComponent>())
+            //{
+            //    Main.logger.Log("Blueprint component for DazedBuff: " + bc.name + " and type: " + bc.GetType().ToString());
+            //}
+            //Main.logger.Log("DazedBuff spell descriptor component " + sdc.Descriptor.Value);
+
 
             //var undeadImmunitiesComponents = undeadImmunities.GetComponents<BlueprintComponent>();
             //foreach (BlueprintComponent bc in undeadImmunitiesComponents)
