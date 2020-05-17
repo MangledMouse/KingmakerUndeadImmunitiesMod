@@ -11,6 +11,9 @@
     # ignore all files with suo
     *.suo
 UndeadImmunitiesMod/.vs/UndeadImmunitiesMod/v16/Server/sqlite3/db.lock
-UndeadImmunitiesMod/.vs*
+UndeadImmunitiesMod/.vs/
+UndeadImmunitiesMod/.obj/
+UndeadImmunitiesMod/UndeadImmunitiesMod/bin/
+
 *.lock
 
