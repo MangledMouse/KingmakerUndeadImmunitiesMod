@@ -12,8 +12,8 @@
     *.suo
 UndeadImmunitiesMod/.vs/UndeadImmunitiesMod/v16/Server/sqlite3/db.lock
 UndeadImmunitiesMod/.vs/
-UndeadImmunitiesMod/.obj/
+UndeadImmunitiesMod/obj/
+UndeadImmunitiesMod/UndeadImmunitiesMod/obj/
 UndeadImmunitiesMod/UndeadImmunitiesMod/bin/
 
 *.lock
-
