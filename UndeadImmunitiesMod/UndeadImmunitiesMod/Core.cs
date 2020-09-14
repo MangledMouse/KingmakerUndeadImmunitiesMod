@@ -34,6 +34,7 @@ namespace UndeadImmunitiesMod
         static internal void load()
         {
             Rebalance.undeadImmunitiesChange();
+            Rebalance.fixWidomCognatogen();
         }
 
         static internal void preLoad()

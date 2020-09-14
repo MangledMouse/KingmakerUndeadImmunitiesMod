@@ -16,6 +16,11 @@ using UnityEngine;
 using Harmony12;
 using Kingmaker.UnitLogic.Abilities.Blueprints;
 using Kingmaker.Designers.Mechanics.Buffs;
+using Kingmaker.UnitLogic.Abilities.Components;
+using Kingmaker.UnitLogic.Mechanics.Actions;
+using Kingmaker.Enums;
+using Kingmaker.ElementsSystem;
+using Kingmaker.UnitLogic.Mechanics;
 
 namespace UndeadImmunitiesMod
 {
@@ -87,33 +92,21 @@ namespace UndeadImmunitiesMod
             };
             undeadImmunities.ComponentsArray = undeadImmunities.ComponentsArray.AddToArray(sbi);
 
-            //BlueprintBuff dazed = library.Get<BlueprintBuff>("9934fedff1b14994ea90205d189c8759");//the buff from the daze spell
-            //SpellDescriptorComponent sdc = dazed.GetComponent<SpellDescriptorComponent>();
-            //sdc.Descriptor = SpellDescriptor.Daze;
-
-            //foreach(BlueprintComponent bc in dazed.GetComponents<BlueprintComponent>())
-            //{
-            //    Main.logger.Log("Blueprint component for DazedBuff: " + bc.name + " and type: " + bc.GetType().ToString());
-            //}
-            //Main.logger.Log("DazedBuff spell descriptor component " + sdc.Descriptor.Value);
-
-
-            //var undeadImmunitiesComponents = undeadImmunities.GetComponents<BlueprintComponent>();
-            //foreach (BlueprintComponent bc in undeadImmunitiesComponents)
-            //{
-            //    Main.logger.Log("Undead immunities component name:" + bc.name + " and type:" + bc.GetType().ToString());
-            //}
-
-            //var deathWardBuff = library.Get<BlueprintBuff>("b0253e57a75b621428c1b89de5a937d1");
-            //foreach(BlueprintComponent bc in deathWardBuff.GetComponents<BlueprintComponent>())
-            //{
-            //    Main.logger.Log("Deathward buff component name: " + bc.name + " and type: " +bc.GetType().ToString());
-            //}
-
-            //var undeadType = library.Get<BlueprintFeature>("734a29b693e9ec346ba2951b27987e33");
-            //undeadType.GetComponent<SpellImmunityToSpellDescriptor>().Descriptor = SpellDescriptor.None;
-            //undeadType.GetComponent<BuffDescriptorImmunity>().Descriptor = SpellDescriptor.None;
         }
+
+        static internal void fixWidomCognatogen()
+        {
+            var wis_cognatogen = library.Get<BlueprintAbility>("84a9092b8430a1344a3c8b002cc68e7f");
+
+            ContextValue fixed_value = new ContextValue()
+            {
+                ValueType = ContextValueType.Rank,
+                ValueRank = AbilityRankType.Default
+            };
+
+            wis_cognatogen.ReplaceComponent<AbilityEffectRunAction>(a => a.Actions.Actions = Helpers.changeAction<ContextActionApplyBuff>(a.Actions.Actions, b => b.DurationValue.BonusValue = fixed_value));
+        }
+
     }
 }
 
@@ -129,6 +122,8 @@ namespace UndeadImmunitiesMod
 //[UndeadImmunitiesMod] Undead immunities component name:$SpellImmunityToSpellDescriptor$fb56d182-0078-4f5e-a1dd-5730215f7e72 and type:Kingmaker.UnitLogic.FactLogic.SpellImmunityToSpellDescriptor
 //[UndeadImmunitiesMod] Undead immunities component name:$AddImmunityToAbilityScoreDamage$d886f4a4-2033-4ed0-bf23-14c29641d25b and type:Kingmaker.UnitLogic.FactLogic.AddImmunityToAbilityScoreDamage
 //[UndeadImmunitiesMod] Undead immunities component name:$AddEnergyImmunity$75dd9c23-8027-4cd3-8753-dbe454f520e3 and type:Kingmaker.UnitLogic.FactLogic.AddEnergyImmunity
+
+
 
 //old maybe useful code
 //Common.undead.RemoveComponent()
@@ -161,3 +156,30 @@ namespace UndeadImmunitiesMod
 //            {
 //                Main.logger.Log("Undead immunities component name:" + bc.name + " and type:" + bc.GetType().ToString());
 //            }
+
+//BlueprintBuff dazed = library.Get<BlueprintBuff>("9934fedff1b14994ea90205d189c8759");//the buff from the daze spell
+//SpellDescriptorComponent sdc = dazed.GetComponent<SpellDescriptorComponent>();
+//sdc.Descriptor = SpellDescriptor.Daze;
+
+//foreach(BlueprintComponent bc in dazed.GetComponents<BlueprintComponent>())
+//{
+//    Main.logger.Log("Blueprint component for DazedBuff: " + bc.name + " and type: " + bc.GetType().ToString());
+//}
+//Main.logger.Log("DazedBuff spell descriptor component " + sdc.Descriptor.Value);
+
+
+//var undeadImmunitiesComponents = undeadImmunities.GetComponents<BlueprintComponent>();
+//foreach (BlueprintComponent bc in undeadImmunitiesComponents)
+//{
+//    Main.logger.Log("Undead immunities component name:" + bc.name + " and type:" + bc.GetType().ToString());
+//}
+
+//var deathWardBuff = library.Get<BlueprintBuff>("b0253e57a75b621428c1b89de5a937d1");
+//foreach(BlueprintComponent bc in deathWardBuff.GetComponents<BlueprintComponent>())
+//{
+//    Main.logger.Log("Deathward buff component name: " + bc.name + " and type: " +bc.GetType().ToString());
+//}
+
+//var undeadType = library.Get<BlueprintFeature>("734a29b693e9ec346ba2951b27987e33");
+//undeadType.GetComponent<SpellImmunityToSpellDescriptor>().Descriptor = SpellDescriptor.None;
+//undeadType.GetComponent<BuffDescriptorImmunity>().Descriptor = SpellDescriptor.None;
